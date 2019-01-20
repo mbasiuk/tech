@@ -1,2 +1,1 @@
-start add tech references here.
-[wiki](https://github.com/mbasiuk/tech/wiki)
+[Tech docs](https://github.com/mbasiuk/tech/wiki)
