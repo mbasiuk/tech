@@ -30,6 +30,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+
+- script: echo test
+- script: echo '$(buildConfiguration)'
+- script: echo $(System.DefaultWorkingDirectory)
+
 - task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
     WebSiteName: 'www.tech.com'
