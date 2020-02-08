@@ -4,14 +4,18 @@
 
 <!DOCTYPE html>
 
-<html>
+<html class="h-100">
 <head>
     <meta name="viewport" content="width=device-width" />
     <title></title>
+    @Styles.Render("~/Content/css")
 </head>
-<body>
-    <div>
-                Hello World!
-    </div>
+<body class="h-100 d-flex flex-column">
+    <main class="flex-shrink-0">
+        Hello World!
+    </main>
+    <footer class="mt-auto py-3">
+        @HttpContext.Current.Application["Version"]
+    </footer>
 </body>
 </html>
