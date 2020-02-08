@@ -34,10 +34,8 @@ steps:
 - script: echo $(buildConfiguration) & echo $(System.DefaultWorkingDirectory) & echo $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
-- task: IISWebAppManagementOnMachineGroup@0
+
+- task: IISWebAppDeploymentOnMachineGroup@0
   inputs:
-    IISDeploymentType: 'IISWebsite'
-    ActionIISWebsite: 'CreateOrUpdateWebsite'
-    WebsiteName: 'www.techdev.com'
-    WebsitePhysicalPath: 'D:\soft\www.techdev.com'
-    WebsitePhysicalPathAuth: 'WebsiteUserPassThrough'
+    WebSiteName: 'www.mproto.net'
+    Package: '$(System.DefaultWorkingDirectory)\**\*.zip'
