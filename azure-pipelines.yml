@@ -34,3 +34,8 @@ steps:
 - script: echo $(buildConfiguration) & echo $(System.DefaultWorkingDirectory) & echo $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
+
+- task: IISWebAppDeploymentOnMachineGroup@0
+  inputs:
+    WebSiteName: 'www.mproto.net'
+    Package: '$(Build.ArtifactStagingDirectory)\**\*.zip'
