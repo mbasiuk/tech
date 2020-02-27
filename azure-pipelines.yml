@@ -10,6 +10,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  Parameters.WebsiteName: 'www.mproto.net'
 
 steps:
 - task: NuGetToolInstaller@1
