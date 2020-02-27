@@ -12,11 +12,6 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
@@ -34,8 +29,3 @@ steps:
 - script: echo $(buildConfiguration) & echo $(System.DefaultWorkingDirectory) & echo $(Build.ArtifactStagingDirectory)
 
 - task: PublishBuildArtifacts@1
-
-- task: IISWebAppDeploymentOnMachineGroup@0
-  inputs:
-    WebSiteName: 'www.mproto.net'
-    Package: '$(Build.ArtifactStagingDirectory)\**\*.zip'
